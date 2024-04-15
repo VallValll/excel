@@ -11,5 +11,6 @@ module.exports = {
     'coma-dangle': 'off',
     'linebreak-style': ['error', 'unix'],
     'eol-last': ['error', 'always'],
+    'require-jsdoc': 0,
   },
 };
