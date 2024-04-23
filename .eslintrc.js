@@ -12,5 +12,8 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     'eol-last': ['error', 'always'],
     'require-jsdoc': 0,
+    'indent': ['error', 2],
+    'operator-linebreak': 'off',
+    'object-curly-spacing': 'off',
   },
 };
