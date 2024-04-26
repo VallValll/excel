@@ -40,6 +40,21 @@ class Dom {
     }
     return this
   }
+
+  get data() {
+    return this.$el.dataset
+  }
+
+  // ищет ближайший родительский
+  // элемент соответствующий указанному CSS селектору
+  closest(selector) {
+    return $(this.$el.closest(selector))
+  }
+
+  getCoords() {
+    // позволяет получить набор координат
+    return this.$el.getBoundingClientRect()
+  }
 }
 
 // event.target
