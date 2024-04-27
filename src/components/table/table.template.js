@@ -34,7 +34,7 @@ function toCell(_, col) {
   return `
     <div class="cell" data-col="${col}" 
       contenteditable></div>
-    `;
+  `;
 }
 
 // генерируем буквы
