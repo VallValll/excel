@@ -9,12 +9,12 @@ function createRow(index, content) {
     ? '<div class="row-resize" data-resize="row"></div>'
     : '';
   return `
-    <div class="row">
+    <div class="row" data-type="resizable">
         <div class="row-info">
             ${index ? index : ''}
             ${resize}
         </div>
-        <div class="row-data">${content}</div>
+        <div class="row-data" data-row=${index}>${content}</div>
     </div>
     `;
 }
@@ -32,7 +32,8 @@ function toColumn(col, index) {
 // ячейки
 function toCell(_, col) {
   return `
-    <div class="cell" data-col="${col}" contenteditable></div>
+    <div class="cell" data-col="${col}" 
+      contenteditable></div>
     `;
 }
 
