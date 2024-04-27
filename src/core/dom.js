@@ -55,6 +55,10 @@ class Dom {
     // позволяет получить набор координат
     return this.$el.getBoundingClientRect()
   }
+
+  findAll(selector) {
+    return this.$el.querySelectorAll(selector)
+  }
 }
 
 // event.target
