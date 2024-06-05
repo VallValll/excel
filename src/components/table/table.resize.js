@@ -23,6 +23,7 @@ export function resizeHandler($root, event) {
     document.onmousemove = (e) => {
       const delta = e.pageY - coords.bottom;
       value = coords.height + delta;
+      console.log(value);
       $resizer.css({ bottom: -delta + 'px' });
     };
   }
