@@ -15,10 +15,10 @@ export class StoreSubscriber {
         if (!isEqual(this.prevState[key], state[key])) {
           components.forEach((component) => {
             if (component.isWatching(key)) {
-              const changes = {[key]: state[key]}
-              component.storeChanged(changes)
+              const changes = { [key]: state[key] };
+              component.storeChanged(changes);
             }
-          })
+          });
         }
       });
 
