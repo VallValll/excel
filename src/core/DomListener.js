@@ -18,7 +18,7 @@ export class DomListener {
         );
       }
       // то же самое, что и addEventListener
-      this[method] = this[method].bind(this)
+      this[method] = this[method].bind(this);
       this.$root.on(listener, this[method]);
     });
   }
@@ -26,8 +26,8 @@ export class DomListener {
   removeDOMListeners() {
     this.listeners.forEach((listener) => {
       const method = getMethodName(listener);
-      this.$root.off(listener, this[method])
-    })
+      this.$root.off(listener, this[method]);
+    });
   }
 }
 

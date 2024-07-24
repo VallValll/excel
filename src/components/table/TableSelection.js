@@ -1,5 +1,5 @@
 export class TableSelection {
-  static className = 'selected'
+  static className = 'selected';
 
   constructor() {
     this.group = [];
@@ -8,7 +8,7 @@ export class TableSelection {
   }
 
   select($el) {
-    this.clear()
+    this.clear();
     $el.focus().addClass(TableSelection.className);
     this.group.push($el);
     this.current = $el;

@@ -39,7 +39,7 @@ export class Table extends ExcelComponent {
     this.selectCell($cell);
 
     this.$on('formula:input', (value) => {
-      this.selection.current.attr('data-value', value)
+      this.selection.current.attr('data-value', value);
       this.selection.current.text(parse(value));
       this.updateTextInStore(value);
     });
@@ -50,18 +50,20 @@ export class Table extends ExcelComponent {
 
     this.$on('toolbar:applyStyle', (value) => {
       this.selection.applyStyle(value);
-      this.$dispatch(actions.applyStyle({
-        value,
-        ids: this.selection.selectedIds,
-      }));
-    })
+      this.$dispatch(
+        actions.applyStyle({
+          value,
+          ids: this.selection.selectedIds,
+        })
+      );
+    });
   }
 
   selectCell($cell) {
     this.selection.select($cell);
     this.$emit('table:select', $cell);
-    const styles = $cell.getStyles(Object.keys(defaultStyles))
-    this.$dispatch(actions.changeStyles(styles))
+    const styles = $cell.getStyles(Object.keys(defaultStyles));
+    this.$dispatch(actions.changeStyles(styles));
   }
 
   async resizeTable(event) {

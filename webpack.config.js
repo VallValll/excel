@@ -48,7 +48,7 @@ module.exports = (env, argv) => {
       clean: true,
     },
     resolve: {
-      extensions: ['.js'],
+      // extensions: ['.js'],
       alias: {
         '@': path.resolve(__dirname, 'src'),
         '@core': path.resolve(__dirname, 'src/core'),
